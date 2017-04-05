@@ -34,43 +34,43 @@
 + updateOne
 
 
-    db.users.updateOne(
-       { "favorites.artist": "Picasso" },
-       {
-         $set: { "favorites.food": "pie", type: 3 },
-         $currentDate: { lastModified: true } //插入了新的字段显示插入时间
-       }
-    )
+        db.users.updateOne(
+           { "favorites.artist": "Picasso" },
+           {
+             $set: { "favorites.food": "pie", type: 3 },
+             $currentDate: { lastModified: true } //插入了新的字段显示插入时间
+           }
+        )
 + updateMany()
     
     
-    db.users.updateMany(
-    {$or:[{'favorites.artist':'Picasso'},{'favorites.artist':'Miro'}]},
-    {$set:{"favorites.artist": "Pisanello", type: 3 },
-        $currentDate:{lastModified:true}
-    }
-    )
+        db.users.updateMany(
+        {$or:[{'favorites.artist':'Picasso'},{'favorites.artist':'Miro'}]},
+        {$set:{"favorites.artist": "Pisanello", type: 3 },
+            $currentDate:{lastModified:true}
+        }
+        )
 同时修改了两个文档中的favorites.artist
 
 + update()
 
 
-    db.users.update(
-       { "favorites.artist": "Pisanello" },
-       {
-         $set: { "favorites.food": "pizza", type: 0,  },
-         $currentDate: { lastModified: true }
-       }
-    )
-    
-    db.users.update(
-       { "favorites.artist": "Pisanello" },
-       {
-         $set: { "favorites.food": "apple", type: 0,  },
-         $currentDate: { lastModified: true }
-       },
-       { multi: true }  //此选项用来更新多个文档
-    )
+        db.users.update(
+           { "favorites.artist": "Pisanello" },
+           {
+             $set: { "favorites.food": "pizza", type: 0,  },
+             $currentDate: { lastModified: true }
+           }
+        )
+        
+        db.users.update(
+           { "favorites.artist": "Pisanello" },
+           {
+             $set: { "favorites.food": "apple", type: 0,  },
+             $currentDate: { lastModified: true }
+           },
+           { multi: true }  //此选项用来更新多个文档
+        )
 ### 文档替换
 + replaceOne()
 
