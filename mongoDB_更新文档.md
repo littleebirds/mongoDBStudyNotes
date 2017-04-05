@@ -75,17 +75,17 @@
 + replaceOne()
 
 
-    db.users.replaceOne(
-       { name: "abc" },
-       { name: "amy", age: 34, type: 2, status: "P", favorites: { "artist": "Dali", food: "donuts" } }
-    )
+        db.users.replaceOne(
+           { name: "abc" },
+           { name: "amy", age: 34, type: 2, status: "P", favorites: { "artist": "Dali", food: "donuts" } }
+        )
 + update()
     
     
-    db.users.update(
-       { name: "xyz" },
-       { name: "mee", age: 25, type: 1, status: "A", favorites: { "artist": "Matisse", food: "mango" } }
-    )
+        db.users.update(
+           { name: "xyz" },
+           { name: "mee", age: 25, type: 1, status: "A", favorites: { "artist": "Matisse", food: "mango" } }
+        )
 
 ### 其他方法
 + db.collections.findOneAndReplace();    
