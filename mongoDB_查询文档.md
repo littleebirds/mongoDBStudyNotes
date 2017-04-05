@@ -13,7 +13,7 @@
 
 
 ### specify query filter conditions
-####specify Equality condition
+#### specify Equality condition
 + 相等的条件匹配
 > db.collection.find{(<field1>:<value1>,...)}
 + 使用操作符    
@@ -152,7 +152,7 @@
 + 在 aggregation pipeline 中, $match 管道阶段提供对MongoDB查询的访问.
 ### 读隔离
 新版功能
-##查询--返回查询的映射字段
+## 查询--返回查询的映射字段
 + 映射文档    
   即在查询返回的结果中进行筛选显示   find(arg1,arg2)第二个参数
    + 1 或 true 在返回的文档中包含字段。
@@ -182,7 +182,7 @@
 >db.users.find( { status: "A" }, { name: 1, status: 1, "points.bonus": 1 } )
 + 映射返回数组中特定的数组元素
 >db.users.find( { status: "A" }, { name: 1, status: 1, points: { $slice: -1 } } )
-##查询--查询值为null或不存在的字段
+## 查询--查询值为null或不存在的字段
 
     db.users.insert(
        [
@@ -209,7 +209,7 @@
 返回结果
 >{ "_id" : 901 }
 
-##查询--在mongo命令行里迭代游标
+## 查询--在mongo命令行里迭代游标
 参见
 http://docs.mongoing.com/manual-zh/tutorial/iterate-a-cursor.html
 
