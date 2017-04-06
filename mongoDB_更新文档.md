@@ -205,4 +205,7 @@
       1. $bit：对整数值执行按位AND，OR和XOR更新。
    + isolation update operator
       1. $isolated：修改写入操作的行为以增加操作的隔离。
+      
+有关操作符的示例代码可以查看官方文档    
+http://docs.mongoing.com/manual-zh/reference/operator/update.html
 
